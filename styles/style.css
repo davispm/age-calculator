@@ -1,0 +1,167 @@
+:root {
+    --cinza: #d3d0d0;
+    --cinza-escuro: #6e6e6e;
+    --cor-principal: #3330E4;
+    --preto: #0a0a0a;
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+body {
+    background-color:var(--cinza);
+    font-family: var(--fonte-principal);
+}
+
+.calculadora {
+    background: linear-gradient(145deg, rgb(245, 243, 243) 0%, rgb(250, 249, 249) 100%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border-radius: 15px 15px 120px 15px;
+}
+
+.calendario {
+    display: flex;
+}
+
+.calendario__conteiner {
+    display: flex;
+    flex-direction: column;
+    margin-right: -160px;
+}
+
+.calendario__data {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--cinza-escuro);
+}
+
+.calendario__input {
+    width: 30%;
+    margin-top: 1em;
+    padding: 0.6em;
+    font-size: 1.3em;
+    font-weight: 800;
+    border: solid 1px var(--cinza);
+    border-radius: 5px;
+}
+
+.calendario__input:hover {
+    border-color: var(--cor-principal);
+}
+
+.calendario__input:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.linha {
+    border-top: 1px solid var(--cinza);
+    width: 32em;
+}
+
+.botao__enviar {
+    padding: 1em;
+    border-radius: 60px;
+    border: none;
+    background-color: var(--cor-principal);
+}
+
+.botao__enviar:hover {
+    background-color: var(--preto);
+    transition: 500ms;
+    cursor: pointer;
+    box-shadow: var(--preto) 1px;
+}
+
+.calculo__conteiner {
+    display: flex;
+    align-items: baseline;
+}
+
+.calculo__numero {
+    color: var(--cor-principal);
+    padding-right: 12px;
+    font-weight: 800;
+    font-size: 5em;
+    font-style: italic;
+}
+
+.calculo__texto {
+    font-weight: 900;
+    font-size: 4em;
+    font-style: italic;
+}
+
+.mensagem-erro {
+    color: red;
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 425px) {
+    .calculadora {
+        width: 80%;
+    }
+
+    .botao {
+        padding: 1em 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .calculadora {
+        width: 75%;
+    }
+
+    .calendario__input {
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+
+    .botao {
+        padding: 1em 0;
+    }
+
+    .calculo__numero {
+        font-size: 3em;
+    }
+
+    .calculo__texto {
+        font-size: 3.5em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .calculadora {
+        width: 75%;
+    }
+
+    .calendario__input {
+        padding: 0.1rem;
+        font-size: 1rem;
+    }
+
+    .botao {
+        padding: 1em 0;
+    }
+
+    .calculo__numero {
+        font-size: 2.5em;
+    }
+
+    .calculo__texto {
+        font-size: 2em;
+    }
+}

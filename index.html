@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculadora de Idade</title>
+</head>
+
+<body>
+  <main class="calculadora">
+
+    <section class="calendario">
+      <div class="calendario__conteiner">
+        <label for="dia" class="calendario__data">Dia</label>
+        <input type="number" name="dia" id="dia" class="calendario__input" required placeholder="DD"maxlength="2">
+        <span class="mensagem-erro"></span>
+      </div>
+
+      <div class="calendario__conteiner">
+        <label for="mes" class="calendario__data">Mês</label>
+        <input type="number" name="mes" id="mes" class="calendario__input" required placeholder="MM"maxlength="2">
+      </div>
+
+      <div class="calendario__conteiner">
+        <label for="ano" class="calendario__data">Ano</label>
+        <input type="number" name="ano" id="ano" class="calendario__input" required placeholder="AAAA"maxlength="4">
+      </div>
+    </section>
+
+    <section class="botao">
+      <span class="linha"></span>
+      <button class="botao__enviar" data-botao>
+        <img src="assets/images/icon-arrow.svg" alt="Botão arredondado com flecha ao centro">
+      </button>
+    </section>
+
+    <section class="calculo">
+      <div class="calculo__conteiner">
+        <span class="calculo__numero" data-anos>--</span>
+        <p class="calculo__texto">anos</p>
+      </div>
+
+      <div class="calculo__conteiner">
+        <span class="calculo__numero" data-meses>--</span>
+        <p class="calculo__texto">meses</p>
+      </div>
+
+      <div class="calculo__conteiner">
+        <span class="calculo__numero" data-dias>--</span>
+        <p class="calculo__texto">dias</p>
+      </div>
+    </section>
+
+  </main>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
